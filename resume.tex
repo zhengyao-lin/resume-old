@@ -1,0 +1,135 @@
+\documentclass{article}
+
+\usepackage{changepage}
+\usepackage{enumitem}
+
+\usepackage{geometry}
+\geometry{a4paper, top=2cm, right=2cm, bottom=2cm, left=2cm}
+
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\setitemize[1]{itemsep=0pt, partopsep=0pt, parsep=\parskip, topsep=0pt}
+
+\usepackage{fontspec}
+\newfontfamily\chinese{AR PL SungtiL GB}
+\newfontfamily\fab{Font Awesome 5 Brands}
+\newfontfamily\far{Font Awesome 5 Free}
+\newfontfamily\fas{Font Awesome 5 Free Solid}
+
+\def\fagithub{{\fab \symbol{"F09B}}}
+\def\faphone{{\fas \symbol{"F3CD}}}
+\def\famail{{\far \symbol{"F0E0}}}
+
+\newcommand{\datesection}[3]{
+	\textbf{#1} \hfill #2
+	\par	
+	#3
+	\par
+	\vspace{3mm}
+}
+
+\newcommand{\rsection}[1]{
+	\vspace{3mm}
+	{\noindent\large #1}
+	\vspace{2mm}
+	\hrule
+	\vspace{3mm}
+}
+
+\newcommand{\link}[1]{\href{#1}{#1}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\LARGE \textbf{Zhengyao Lin \hspace{2mm} \chinese 林正耀}} \\
+\vspace{2mm}
+{\large
+	\famail \, rod.yeti@outlook.com
+	\hspace{2mm}
+	\faphone \, (+86)182-6715-9452
+	\hspace{2mm}
+	\fagithub \, github.com/rod-lin
+}
+\end{center}
+
+\rsection{Education}
+
+\datesection
+	{University of Illinois at Urbana Champaign}{2018 - present}
+	{B.S. in Computer Science and Linguistics}
+	
+\datesection
+	{Carnegie Mellon University}{June 2017 - Aug 2017}
+	{Pre-college program, Computer Science and Math}
+	
+\datesection
+	{Zhejiang University}{July 2016 - Aug 2016}
+	{Summer program, Computer Systems}
+	
+\datesection
+	{Hangzhou Foreign Languages School}{2015 - 2018}
+	{Cambridge A-Level Center}
+	
+\rsection{Projects}
+\datesection
+	{Tucker, Bitcoin full node implementation}{Jan 2018 - present}
+	{
+		Haskell, C, individual project, \link{github.com/rod-lin/tucker} \par
+		\vspace{2mm}
+		Implemented basic Bitcoin protocol(block verification, blockchain, peer service, PC mining, etc.) \par
+		Implemented csv(BIP 68, 112, 113) and segwit(BIP 141, 143, 147) softforks \par
+		Other supported BIPs: 9(version bits), 32(HD wallets), 39(mnemonic codes), etc. \par
+		Partial support for Bitcoin Gold(equihash) \par
+		Currently working on RPC and wallet support
+	}
+	
+\datesection
+	{ink \& ivm, dynamically typed language and its vm backend}{Nov 2015 - Aug 2017}
+	{
+		C, individual project, \link{github.com/rod-lin/ivm}, \link{github.com/rod-lin/ink} \par
+		\vspace{2mm}
+		Features:
+		\begin{itemize}
+			\item Native supported coroutine and threading
+			\item Prototype-based
+			\item Dynamic features: operator overloading, meta programming, etc.
+			\item Performance close to CPython(80\% - 105\%)
+			\item Support for *nix and Windows
+			\item Several basic utility modules
+		\end{itemize}
+	}
+	
+\datesection
+	{Foci, event organizing website}{Jan 2017 - Feb 2018}
+	{
+		Front-end, Node.js, individual project, \link{foci.me}
+	}
+
+\datesection
+	{Phi, C-like language}{Feb 2015 - Aug 2015}
+	{
+		C++, llvm, individual project, \link{github.com/rod-lin/ivm}
+	}
+	
+\datesection
+	{Bitcoin.org, Bitcoin website \& documentation}{Jun 2018}
+	{
+		Contributor,  \link{github.com/bitcoin-dot-org/bitcoin.org}
+	}
+	
+\rsection{Skills}
+	Programming Languages: C == Haskell > Python > C++ > Node.js == web \par
+	Familiar with Bitcoin protocol \par
+	Compiler \& virtual machine design(basic) \par
+	Languages: English(TOEFL 109/120, ACT 34/36), Chinese(native) \par
+	\vspace{2mm}
+
+\rsection{Honors}
+	NOIP $2^{nd}$ Prize, Zhejiang Province \hfill Nov 2014 \par
+	FLL 2015 $1^{st}$ Place, Zhejiang Province \hfill Feb 2015 \par
+	FLL 2016 $4^{th}$ Place, Zhejiang Province \hfill Feb 2016 \par
+	RoboCup Junior 2016 $2^{nd}$ Prize, China \hfill April 2016 \par
+
+\end{document}
